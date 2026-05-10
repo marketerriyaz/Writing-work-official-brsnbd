@@ -1,172 +1,282 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '25740548248911509');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=25740548248911509&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Telegram Channel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Writing work projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
-    .elementor img {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: auto;
-    max-width: 100%;
-    border-radius: 90px;
-}
-    .card {
-      backdrop-filter: blur(12px);
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 1rem;
-      padding: 2rem;
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    body{
+      font-family:'Poppins',sans-serif;
+      min-height:100vh;
+      background:linear-gradient(135deg,#162d8f,#6a11cb);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
     }
-    .btn-telegram {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 0.8rem 1.2rem;
-      border-radius: 0.75rem;
-      font-weight: bold;
-      color: white;
-      background: linear-gradient(90deg, #0088cc, #00bcd4);
-      transition: 0.3s;
-      width: 100%;
+
+    .card{
+      width:100%;
+      max-width:430px;
+      background:#fff;
+      border-radius:35px;
+      border:5px solid #f1b91c;
+      padding:30px 22px;
+      position:relative;
+      box-shadow:0 20px 60px rgba(0,0,0,0.25);
+      overflow:hidden;
     }
-    .btn-telegram:hover {
-      background: linear-gradient(90deg, #00bcd4, #0088cc);
-      transform: translateY(-2px);
+
+    .verified-badge{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:#2563eb;
+      color:#fff;
+      padding:10px 18px;
+      border-radius:50px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1px;
+      box-shadow:0 8px 20px rgba(37,99,235,0.3);
     }
-    .feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: 0.95rem;
+
+    .logo-box{
+      width:95px;
+      height:95px;
+      border-radius:50%;
+      border:3px solid #e5b81f;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:25px auto 18px;
+      overflow:hidden;
+      background:#fffdf5;
+    }
+
+    .logo-box img{
+      width:60px;
+      height:60px;
+      object-fit:contain;
+    }
+
+    .company-name{
+      text-align:center;
+      font-family:'Dancing Script',cursive;
+      color:#1e40af;
+      font-size:42px;
+      font-weight:700;
+      line-height:1;
+    }
+
+    .company-sub{
+      text-align:center;
+      color:#444;
+      letter-spacing:2px;
+      font-size:11px;
+      margin-top:8px;
+      font-weight:600;
+    }
+
+    .main-heading{
+      text-align:center;
+      margin-top:38px;
+      line-height:1.25;
+      font-size:30px;
+      font-weight:800;
+      color:#111827;
+    }
+
+    .main-heading span{
+      color:#2563eb;
+      display:block;
+    }
+
+    .feature-box{
+      margin-top:32px;
+      background:#eef2f7;
+      border-radius:22px;
+      padding:24px 20px;
+      border:1px solid #dbe4ef;
+    }
+
+    .feature{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:20px;
+      color:#374151;
+      font-size:18px;
+      font-weight:600;
+    }
+
+    .feature:last-child{
+      margin-bottom:0;
+    }
+
+    .check{
+      color:#22c55e;
+      font-size:26px;
+      font-weight:700;
+    }
+
+    .telegram-btn-wrap{
+      margin-top:28px;
+      background:#dcecf7;
+      border-radius:28px;
+      padding:14px;
+    }
+
+    .telegram-btn{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+      background:linear-gradient(135deg,#0ea5e9,#0284c7);
+      color:#fff;
+      padding:22px 20px;
+      border-radius:22px;
+      font-size:20px;
+      font-weight:800;
+      transition:0.3s ease;
+      box-shadow:0 12px 30px rgba(2,132,199,0.35);
+    }
+
+    .telegram-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .slots{
+      margin-top:18px;
+      text-align:center;
+      color:#dc2626;
+      font-weight:700;
+      font-size:16px;
+      animation:blink 1s infinite;
+    }
+
+    @keyframes blink{
+      0%{opacity:1;}
+      50%{opacity:0.5;}
+      100%{opacity:1;}
+    }
+
+    .dot{
+      font-size:24px;
+      vertical-align:middle;
+    }
+
+    .footer{
+      margin-top:40px;
+      text-align:center;
+      color:#9ca3af;
+      font-size:12px;
+      letter-spacing:3px;
+      border-top:1px solid #f1f5f9;
+      padding-top:22px;
+      font-weight:600;
+    }
+
+    @media(max-width:480px){
+      .card{
+        padding:24px 18px;
+        border-radius:28px;
+      }
+
+      .company-name{
+        font-size:34px;
+      }
+
+      .main-heading{
+        font-size:24px;
+      }
+
+      .feature{
+        font-size:16px;
+      }
+
+      .telegram-btn{
+        font-size:18px;
+        padding:18px;
+      }
+
+      .verified-badge{
+        font-size:10px;
+        padding:8px 14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <!-- Profile Image -->
-    <div class="w-32 h-32 mx-auto mb-4 ">
-      <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/09/rochit.jpg" alt="Profile" class="w-full h-full rounded-full object-cover shadow-lg border-4 border-white rounded-xxl">
+
+    <div class="verified-badge">VERIFIED COMPANY</div>
+
+    <div class="logo-box">
+      <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2026/05/images.png" alt="Logo">
     </div>
 
-    <!-- Heading -->
-    <h1 class="text-xl font-extrabold text-gray-800 mb-1">
-    TRADE WITH ROCHIT SINGH 💸🏆
+    <h2 class="company-name">Script Global Elite</h2>
+    <p class="company-sub">PRIVATE LIMITED</p>
+
+    <h1 class="main-heading">
+      WORK FROM HOME
+      <span>HANDWRITING</span>
+      <span>PROJECTS</span>
     </h1>
 
-    <!-- Experience -->
-    <p class="text-red-600 font-semibold mb-4">📊 Experience Tr@der 📊</p>
+    <div class="feature-box">
 
-    <!-- CTA Button -->
-    <a href="https://www.t.me/+Is1eyDtx41tkZTAx" target="_blank" class="btn-telegram mb-6">
+      <div class="feature">
+        <div class="check">✓</div>
+        <div>No Experience Required</div>
+      </div>
 
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-      </svg>
-      JOIN TELEGRAM 💬
-    </a>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div>Daily Payouts (Bank/UPI)</div>
+      </div>
 
-    <!-- Features -->
-    <p class="text-red-600 font-bold mb-4">💎 DAILY PROFIT GURANTEE 💎</p>
-    <div class="text-left space-y-3 text-gray-800 mb-6">
-      <div class="feature">📊 <span><b>Live Daily Trades</b> – From my portfolio to yours!</span></div>
-      <div class="feature">🔥 <span><b>Exclusive Signals</b> – Get the same trades I take!</span></div>
-      <div class="feature">💯 <span><b>High Accuracy</b> – Consistent proven strategy!</span></div>
-      <div class="feature">💡 <span><b>Real-Time Updates</b> – Instant market alerts!</span></div>
+      <div class="feature">
+        <div class="check">✓</div>
+        <div>Simple Assignment Copy Work</div>
+      </div>
+
     </div>
 
-    <!-- Hindi Section -->
-    <h2 class="text-lg font-bold text-gray-800 mb-2">क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?</h2>
-    <p class="text-red-600 font-semibold">
-      अगर हां तो दिए गए टेलीग्राम बटन पर दबाएं !
-    </p>
+    <div class="telegram-btn-wrap">
+      <a class="telegram-btn" href="https://t.me/+AKijnv5TV09kODE1" target="_blank">
+        JOIN TELEGRAM NOW
+      </a>
+    </div>
+
+    <div class="slots">
+      <span class="dot">●</span>
+      ONLY 7 SLOTS LEFT FOR TODAY!
+    </div>
+
+    <div class="footer">
+      © 2026 SCRIPT GLOBAL ELITE PRIVATE LIMITED
+    </div>
+
   </div>
 
 </body>
 </html>
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Your Telegram link and logo are already added.
